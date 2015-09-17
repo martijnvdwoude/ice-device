@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Categories -->
+    <string name="category_proxy">IceProxy</string>
+    <string name="category_beacons">Beacons</string>
+    <string name="category_notifications">Notifications</string>
+
+    <!-- Proxy preferences -->
+    <string name="preference_proxy_device_id_title">Device ID</string>
+    <string name="preference_proxy_device_id_summary">The device ID that is usually labeled on the back of the device</string>
+    <string name="preference_proxy_device_id_dialog_title">Device ID</string>
+
+    <string name="preference_proxy_custom_url_checkbox_title">Use custom proxy URL</string>
+    <string name="preference_proxy_custom_url_checkbox_summary">The default proxy URL is \n</string>
+
+    <string name="preference_proxy_custom_url_title">Custom URL</string>
+    <string name="preference_proxy_custom_url_summary">Enter the custom URL for the proxy to which this device has to register beacons to</string>
+    <string name="preference_proxy_custom_url_dialog_title">IceProxy URL</string>
+
+    <string name="preference_proxy_port_title">Port</string>
+    <string name="preference_proxy_port_summary">Port of the proxy service</string>
+    <string name="preference_proxy_port_dialog_title">IceProxy port</string>
+
+    <!-- Notification preferences -->
+    <string name="preference_notifications_title">Enable notifications</string>
+    <string name="preference_notifications_summary">Notifications for when this device has been linked to a beacon</string>
+
+</resources>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="estimote_app_id">device</string>
+    <string name="estimote_app_token">81a35a271e19673d96280a6fab5868fe</string>
+
+    <string name="estimote_proximity_uuid">B9407F30–F5F8–466E-AFF9-25556B57FE6D</string>
+</resources>

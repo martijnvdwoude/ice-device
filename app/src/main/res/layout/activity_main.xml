@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity"
+    android:background="@color/applicationBackgroundColor">
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+            app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+            android:layout_width="match_parent"
+            android:background="@color/colorPrimary"
+            android:layout_height="?android:attr/actionBarSize">
+
+        </android.support.v7.widget.Toolbar>
+
+    </android.support.design.widget.AppBarLayout>
+
+    <RelativeLayout
+        android:id="@+id/content_wrapper"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:animateLayoutChanges="true">
+
+        <!-- No bluetooth message layout -->
+        <LinearLayout
+            android:id="@+id/layout_no_bluetooth"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:padding="44dp"
+            android:visibility="gone">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_settings_bluetooth_black_48dp"
+                android:layout_marginBottom="24dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/no_bluetooth"
+                android:gravity="center"
+                android:textColor="@color/applicationTextColorPrimary"
+                android:layout_marginBottom="28dp"/>
+
+        </LinearLayout>
+
+        <!-- Beacon wrapper layout -->
+        <LinearLayout
+            android:id="@+id/beacon_content_wrapper"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:animateLayoutChanges="true">
+
+            <!-- Estimote icon layout -->
+            <RelativeLayout
+                android:id="@+id/estimote_beacon_wrapper"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/estimote_beacon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/estimote_beacon"
+                    android:background="@drawable/estimote_beacon_background"
+                    android:padding="18dp"
+                    android:layout_centerInParent="true"/>
+
+                <!--<ImageView-->
+                    <!--android:id="@+id/estimote_linked"-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:src="@drawable/estimote_beacon"-->
+                    <!--android:layout_alignParentRight="true"-->
+                    <!--android:padding="14dp"/>-->
+
+            </RelativeLayout>
+
+            <!-- Beacon scanning layout -->
+            <LinearLayout
+                android:id="@+id/layout_scanning_placeholder"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:padding="44dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/scanning_for_beacons"
+                    android:gravity="center"
+                    android:textColor="@color/applicationTextColorPrimary"
+                    android:layout_marginBottom="28dp" />
+
+                <ProgressBar
+                    android:id="@+id/estimote_beacon_scanning_indicator"
+                    style="@style/Base.Widget.AppCompat.ProgressBar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:indeterminate="true"
+                    android:indeterminateTintMode="src_in"
+                    android:indeterminateTint="@color/estimote_beacon_radiation"
+                    android:visibility="gone"/>
+
+            </LinearLayout>
+
+            <!-- Beacon info layout -->
+            <LinearLayout
+                android:id="@+id/layout_beacon_info"
+                android:layout_width="wrap_content"
+                android:layout_height="200dp"
+                android:layout_centerInParent="true"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:layout_marginTop="26dp"
+                android:padding="26dp"
+                android:visibility="gone"
+                android:background="@android:color/white">
+
+                <TextView
+                    android:id="@+id/beacon_info_workstation_id"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/applicationTextColorPrimary"
+                    android:layout_marginBottom="14dp" />
+
+                <TextView
+                    android:id="@+id/beacon_info_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/applicationTextColorPrimary"
+                    android:layout_marginBottom="14dp" />
+
+                <TextView
+                    android:id="@+id/beacon_info_range"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/applicationTextColorPrimary"
+                    android:layout_marginBottom="14dp"/>
+
+                <TextView
+                    android:id="@+id/beacon_info_power"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/applicationTextColorPrimary"
+                    android:layout_marginBottom="14dp"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</LinearLayout>

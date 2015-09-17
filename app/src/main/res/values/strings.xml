@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">IceDevice</string>
+
+    <!-- Screen titles -->
+    <string name="screenTitle_main">@string/app_name</string>
+    <string name="screenTitle_preferences">Preferences</string>
+
+    <!-- Actions -->
+    <string name="action_preferences">Preferences</string>
+
+    <!-- Content -->
+    <string name="scanning_for_beacons">Scanning for nearby Estimote beacon\nHold the device close to your beacon</string>
+    <string name="no_bluetooth">Device does not have Bluetooth Low Energy</string>
+</resources>

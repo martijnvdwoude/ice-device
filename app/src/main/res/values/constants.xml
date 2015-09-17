@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="default_proxy_url">10.41.102.46</string>
+    <string name="register_to_proxy_path">/devices/register</string>
+</resources>
